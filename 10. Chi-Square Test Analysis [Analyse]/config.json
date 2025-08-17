@@ -1,0 +1,18 @@
+{
+  "description": {
+    "names": {
+      "en": "10. Chi-kwadraat toets"
+    }
+  },
+  "evaluation": {
+    "handler": "R",
+    "test_suite": "evaluation"
+  },
+  "programming_language": "R",
+  "access": "public",
+  "labels": [],
+  "internals": {
+    "token": "7tFmJwhnSPfrbWRD-Rnw5sgcywhQ3q5xyd2RErwFWaXdM-mMqP7SQfjIiE6DHP6f",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "description": {
+    "names": {
+      "en": "02. Beschrijvend vs. Inferentieel statistiek"
+    }
+  },
+  "evaluation": {
+    "handler": "R",
+    "test_suite": "evaluation"
+  },
+  "programming_language": "R",
+  "access": "public",
+  "labels": [],
+  "internals": {
+    "token": "nAH9NN6HRqmM8Brc-6XkQb7pJtnJZYRHCzSfgF-P9Ys7Abfj2-nNb5QExUvtIynb",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}
