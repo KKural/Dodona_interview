@@ -11,8 +11,8 @@ context({
           student_answer <- tryCatch({
             parts <- unlist(strsplit(as.character(generated), ","))
             if(length(parts) != 2) return(NA)
-            lower <- as.numeric(trim(parts[1]))
-            upper <- as.numeric(trim(parts[2]))
+            lower <- as.numeric(trimws(parts[1]))
+            upper <- as.numeric(trimws(parts[2]))
             c(lower, upper)
           }, error = function(e) {
             return(NA)
