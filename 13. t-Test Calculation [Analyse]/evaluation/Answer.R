@@ -5,7 +5,7 @@ context({
       testEqual(
         "",
         function(env) as.numeric(env$evaluationResult),
-        2.89,  # the correct t-statistic
+        5.51,  # the correct t-statistic - verified with R calculation
         comparator = function(generated, expected, ...) {
           # Get the exact student answer for feedback
           student_answer <- tryCatch({
@@ -26,24 +26,24 @@ context({
           mean2 <- mean(group2)  # 11.5
           
           # Sample standard deviations (n-1)
-          sd1 <- sd(group1)      # 2.73
+          sd1 <- sd(group1)      # 2.58
           sd2 <- sd(group2)      # 1.87
           
           # Pooled standard deviation
           pooled_var <- ((n1-1)*sd1^2 + (n2-1)*sd2^2) / (n1 + n2 - 2)
-          pooled_sd <- sqrt(pooled_var)  # 2.35
+          pooled_sd <- sqrt(pooled_var)  # 2.25
           
           # Standard error
-          se <- pooled_sd * sqrt(1/n1 + 1/n2)  # 1.36
+          se <- pooled_sd * sqrt(1/n1 + 1/n2)  # 1.30
           
           # t-statistic
-          t_stat <- (mean1 - mean2) / se  # 2.89
+          t_stat <- (mean1 - mean2) / se  # 5.51
           t_stat_rounded <- round(t_stat, 2)
           
           # Degrees of freedom
           df <- n1 + n2 - 2  # 10
           
-          # Determine if answer is correct
+          # Determine if answer is correct (tolerance of 0.05)
           is_correct <- !is.na(student_answer) && abs(student_answer - t_stat_rounded) < 0.05
           
           if (is_correct) {
@@ -66,14 +66,14 @@ context({
                     "SE = spooled × √(1/n₁ + 1/n₂) = ", round(pooled_sd, 2), " × √(1/6 + 1/6) = ", round(pooled_sd, 2), " × ", round(sqrt(1/6 + 1/6), 3), " = ", round(se, 2), "\n\n",
                     "**Stap 5: t-statistiek**\n",
                     "t = (x̄₁ - x̄₂) / SE = (", round(mean1, 2), " - ", round(mean2, 2), ") / ", round(se, 2), " = ", round(mean1-mean2, 2), " / ", round(se, 2), " = ", t_stat_rounded, "\n\n",
-                    "**Interpretatie:** Met df = ", df, " en t = ", t_stat_rounded, ", is dit een significant resultaat (kritieke waarde ≈ 1.81 bij α = 0.05, eenzijdig). De interventie lijkt effectief te zijn!"), 
+                    "**Interpretatie:** Met df = ", df, " en t = ", t_stat_rounded, ", is dit een zeer significant resultaat (kritieke waarde ≈ 1.81 bij α = 0.05, eenzijdig). De interventie is duidelijk effectief!"), 
               type = "markdown"
             )
           } else {
             # Feedback for incorrect answers
             if (is.na(student_answer)) {
               get_reporter()$add_message(
-                "❌ Fout. Je hebt geen geldige numerieke waarde ingevoerd. Voer de t-statistiek in als een getal, bijvoorbeeld: 2.89", 
+                "❌ Fout. Je hebt geen geldige numerieke waarde ingevoerd. Voer de t-statistiek in als een getal, bijvoorbeeld: 5.51", 
                 type = "markdown")
             } else if (abs(student_answer - (mean1 - mean2)) < 0.1) {
               get_reporter()$add_message(
