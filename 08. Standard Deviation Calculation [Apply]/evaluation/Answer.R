@@ -5,7 +5,7 @@ context({
       testEqual(
         "",
         function(env) as.numeric(env$evaluationResult),
-        8.54,  # the correct standard deviation
+        7.61,  # the correct standard deviation
         comparator = function(generated, expected, ...) {
           # Get the exact student answer for feedback
           student_answer <- tryCatch({
@@ -21,8 +21,8 @@ context({
           deviations <- data - mean_val
           squared_deviations <- deviations^2
           variance <- sum(squared_deviations) / n  # Population variance
-          std_dev <- sqrt(variance)  # 8.540126
-          std_dev_rounded <- round(std_dev, 2)  # 8.54
+          std_dev <- sqrt(variance)  # 7.614747
+          std_dev_rounded <- round(std_dev, 2)  # 7.61
           
           # Determine if answer is correct
           is_correct <- !is.na(student_answer) && abs(student_answer - std_dev_rounded) < 0.01

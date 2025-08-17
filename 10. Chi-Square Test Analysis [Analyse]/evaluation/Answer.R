@@ -5,7 +5,7 @@ context({
       testEqual(
         "",
         function(env) as.numeric(env$evaluationResult),
-        8.54,  # the correct chi-square value
+        8.53,  # the correct chi-square value
         comparator = function(generated, expected, ...) {
           # Get the exact student answer for feedback
           student_answer <- tryCatch({

@@ -5,7 +5,7 @@ context({
       testEqual(
         "",
         function(env) as.numeric(env$evaluationResult),
-        0.64,  # the correct Cohen's d
+        0.63,  # the correct Cohen's d
         comparator = function(generated, expected, ...) {
           # Get the exact student answer for feedback
           student_answer <- tryCatch({
