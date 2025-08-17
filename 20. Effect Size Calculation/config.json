@@ -1,0 +1,19 @@
+{
+    "type": "exercise",
+    "programming_language": "r",
+    "natural_language": "en",
+    "description": {
+        "names": {
+            "en": "20. Effect Size Calculation (Cohen's d)"
+        }
+    },
+    "labels": [
+        "statistics",
+        "effect-size",
+        "cohens-d",
+        "practical-significance",
+        "criminology"
+    ],
+    "internals": {},
+    "workdir": "."
+}
