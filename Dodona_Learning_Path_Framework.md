@@ -1,9 +1,5 @@
 # Dodona Learning Path: Pedagogical & Technical Framework
 
-*Document generated: August 17, 2025*  
-*Version: 2.0*  
-*Status: Deployment Ready*
-
 ## Criminology Student Profile
 
 Criminology students typically come from a social science orientation with varying levels of mathematical preparation. They approach statistics primarily as practical tools for understanding crime data rather than as abstract mathematical concepts. Many initially approach statistics with apprehension due to limited prior exposure to formal statistical training. However, when presented through relevant criminological examples, students typically demonstrate stronger engagement and comprehension.
@@ -102,42 +98,37 @@ Three key scaffolding techniques (Wood et al., 1976) support student development
 
 ### Example Content and Feedback
 
-#### Sample Exercise Structure
+#### Sample Exercise Structure (Exercise 04: Central Tendency and Outliers)
 
-**Title:** Invloed van Uitschieters op Centrummaten  
-**Context:** Inbraakcijfers in 10 wijken in Gent: [5, 7, 6, 8, 5, 9, 6, 7, 40, 7]  
-**Scenario:** "Als criminoloog analyseer je inbraakcijfers voor 10 wijken in Gent. Je merkt dat één wijk een opvallend hoog aantal inbraken heeft."
+**Context:** Beschouw de volgende dataset met het aantal delicten per maand gepleegd door een groep jeugdige delinquenten: `[65, 70, 70, 80, 85, 85, 85, 90, 95, 98, 100]`
 
-**Question:** Welke uitspraak is correct over de representativiteit van centrummaten voor deze dataset?
+**Question:** Welke van de volgende uitspraken is correct?
 
-A) De mediaan geeft een beter beeld van het "typische" inbraakcijfer omdat deze minder wordt beïnvloed door de uitschieter  
-B) Het gemiddelde geeft een beter beeld van de algemene veiligheidssituatie  
-C) Beide centrummaten zijn even representatief voor deze dataset  
-D) Geen van beide centrummaten is geschikt voor het analyseren van deze data
+1. Het gemiddelde is groter dan de mediaan
+2. De mediaan is groter dan het gemiddelde  
+3. De modus is groter dan zowel het gemiddelde als de mediaan
+4. Het gemiddelde, de mediaan en de modus zijn allemaal gelijk
+
+#### Sample Calculation Exercise (Exercise 08: Standard Deviation)
+
+**Context:** Een politieanalyst heeft de volgende dataset met het aantal geweldsmisdrijven per week in een district over 8 weken geobserveerd: `[12, 15, 18, 22, 25, 28, 32, 35]`
+
+**Task:** Bereken de standaarddeviatie van deze dataset stap voor stap. Rond je eindantwoord af op twee decimalen.
+
+**Expected Answer:** 7.61
 
 #### Feedback Examples
 
-**Correct Answer:** "Juist! De mediaan (7) wordt minder beïnvloed door de extreme waarde van 40 in wijk 9. Het gemiddelde (10) wordt sterk omhoog getrokken door deze uitschieter. Bij het rapporteren van 'typische' inbraakcijfers aan beleidsmakers zou de mediaan een accurater beeld geven."
+**Conceptual Feedback:** "Bij een rechts-scheve verdeling is het gemiddelde vaak groter dan de mediaan, bij een links-scheve verdeling is het omgekeerd. Bereken eerst de drie centrummaten en vergelijk ze met elkaar."
 
-**Incorrect Answer:** "Niet correct. Het gemiddelde (10) wordt sterk beïnvloed door de uitschieter van 40 inbraken in één wijk. Dit geeft een vertekend beeld van de 'typische' wijk, aangezien 9 van de 10 wijken tussen 5-9 inbraken hebben."
+**Procedural Feedback:** "Bereken eerst het gemiddelde: (12+15+18+22+25+28+32+35)/8. Gebruik dit gemiddelde om de afwijkingen te berekenen, kwadrateer alle afwijkingen en tel ze op, deel door het aantal observaties (n=8), en neem de wortel van het resultaat."
 
 #### Progressive Hint System
 
-**Conceptual Hints:**
-- "Het gemiddelde is gevoelig voor uitschieters, wat belangrijk is bij het analyseren van misdaadcijfers."
-- "Let op: bij een chi-kwadraattoets is de nulhypothese dat er geen verband bestaat tussen de variabelen."
-
-**Procedural Hints:**  
-- "Bereken zowel het gemiddelde als de mediaan en vergelijk de resultaten."
-- "Visualiseer de data met een boxplot om de positie van de uitschieter te zien."
-
-**Interpretive Hints:**
-- "Een correlatie van 0,7 tussen werkloosheid en misdaad betekent een sterk verband, maar nog geen causaal verband."  
-- "Bij het interpreteren van p-waarden, onthoud dat 'niet significant' niet hetzelfde is als 'geen effect'."
-
-#### Supplemental Learning Resources
-- **Interactive Elements:** Video tutorials, interactive simulations
-- **Practice Materials:** Additional exercises with worked examples
+**Hints for Statistical Concepts:**
+- "Bij een rechts-scheve verdeling is het gemiddelde vaak groter dan de mediaan"
+- "Gebruik de populatie-formule (delen door n), niet de steekproef-formule (delen door n-1)"
+- "Bereken eerst het gemiddelde, dan de afwijkingen, kwadrateer ze, en neem de wortel"
 
 ## Platform Implementation and Monitoring
 
@@ -145,8 +136,7 @@ D) Geen van beide centrummaten is geschikt voor het analyseren van deze data
 
 The Dodona platform provides:
 - **Comprehensive dashboards** for student progress monitoring
-- **Performance breakdowns** by course section  
-- **Identification of conceptual gaps** requiring intervention
+- **Performance breakdowns** by course section
 
 ### Technical Implementation
 
@@ -156,28 +146,9 @@ The Dodona platform provides:
 
 ### Accessibility and Integration
 
-- **Language Support:** Dutch content with terminology aligned to student knowledge
 - **Visual Alternatives:** Text descriptions for all visual elements
 - **Auto-grading:** Automated evaluation with detailed feedback
 - **Progress Tracking:** Monitoring of completion rates and performance
-
-## Mathematical Accuracy and Verification
-
-All mathematical content has been rigorously verified using multiple validation methods:
-
-### Corrected Mathematical Issues
-
-During development, several calculation discrepancies were identified and corrected:
-
-| Exercise | Issue Found | Correction Applied | Verification Method |
-|----------|-------------|-------------------|-------------------|
-| 08 | Standard deviation expected 8.54 vs calculated 7.61 | Updated Answer.R to 7.61 | R built-in `sd()` function |
-| 09 | Correlation expected -0.983 vs calculated -0.989 | Updated Answer.R to -0.989 | R built-in `cor()` function |
-| 10 | Chi-square expected 8.54 vs calculated 8.53 | Updated Answer.R to 8.53 | R built-in `chisq.test()` function |
-| 14 | CI expected [24.65,31.35] vs calculated [25.05,31.17] | Updated Answer.R to [25.05,31.17] | Manual calculation with t-distribution |
-| 15 | Cohen's d expected 0.64 vs calculated 0.63 | Updated Answer.R to 0.63 | Pooled standard deviation formula |
-
-All formulas have been verified against statistical textbooks and cross-checked with R built-in functions to ensure mathematical accuracy.
 
 ## Future Development
 
@@ -190,16 +161,10 @@ This learning path combines technical accuracy with pedagogical insight to creat
 
 ## References
 
-Anderson, L. W., Krathwohl, D., Airasian, P., Cruikshank, K., Mayer, R., Pintrich, P., Raths, J., & Wittrock, M. (Eds.). (2001). *A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives*. Longman.
+Anderson, L. W., Krathwohl, D., Airasian, P., Cruikshank, K., Mayer, R., Pintrich, P., Raths, J., & Wittrock, M. (Eds.). (2001). *A taxonomy for learning, teaching and assessing: A revision of Bloom's taxonomy of educational objectives*. Longman.
 
 Krathwohl, D. R. (2002). A Revision of Bloom's Taxonomy: An Overview. *Theory Into Practice*, 41(4), 212–218.
 
 Wood, D., Bruner, J. S., & Ross, G. (1976). The Role of Tutoring in Problem Solving. *Journal of Child Psychology and Psychiatry*, 17(2), 89–100.
 
 Reference document: *20250627_Dodona Learning Path.docx*
-
----
-
-*Document generated: August 17, 2025*  
-*Version: 2.0*  
-*Status: Deployment Ready*
