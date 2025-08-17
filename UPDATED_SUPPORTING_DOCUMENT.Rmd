@@ -319,137 +319,79 @@ if (abs(student_answer - correct_answer) < 0.01) {
 
 ---
 
-# Exercise-Specific Implementation
+# Exercise-Specific Implementation Examples
 
 ## Foundation Level: Remember & Understand (Exercises 01-04)
 
-### Exercise 01: Level of Measurement
+### Example: Exercise 01 - Level of Measurement
 **Learning Objective:** Students identify and classify variables by measurement level
 **Criminological Context:** Crime type classification for database design
-**Assessment Strategy:** Multiple choice with detailed feedback explaining each classification
+**Scaffolding Features:**
+- Complete definitions provided directly in feedback
+- Clear examples with crime data: "Soort misdrijf" as nominal variable
+- Visual classification guides explaining why options are correct/incorrect
 
-### Exercise 02: Descriptive vs Inferential Statistics  
-**Learning Objective:** Students differentiate between statistical approaches
-**Criminological Context:** Police department report purposes and audience
-**Assessment Strategy:** Scenario-based selection with policy implications
+**Sample Feedback:**
+```
+"✅ Juist! 'Soort misdrijf' is een *nominaal* meetniveau: 
+het gaat enkel om verschillende categorieën zonder ordening.
 
-### Exercise 03: Null Hypothesis Formation
-**Learning Objective:** Students construct proper null and alternative hypotheses
-**Criminological Context:** Testing intervention effectiveness  
-**Assessment Strategy:** Written hypothesis construction with notation
-
-### Exercise 04: Central Tendency and Outliers
-**Learning Objective:** Students understand outlier impact on summary statistics
-**Criminological Context:** Juvenile delinquency rates across districts with one extreme case
-**Assessment Strategy:** Calculation and interpretation comparison
+**Waarom nominaal?**
+- Verschillende categorieën: Diefstal, Inbraak, Geweld
+- Geen natuurlijke ordening tussen categorieën  
+- Je kunt alleen tellen en percentages berekenen"
+```
 
 ## Application Level: Apply (Exercises 05-09)
 
-### Exercise 05: Crime Rate Calculation
-**Learning Objective:** Students standardize raw counts to meaningful rates
-**Criminological Context:** Comparing burglary rates across municipalities of different sizes
-**R Integration:** Automated rate calculation and interpretation
-
-```r
-# R Code Integration Example
-calculate_crime_rate <- function(crimes, population, per = 1000) {
-  rate <- (crimes / population) * per
-  return(round(rate, 2))
-}
-
-# Student verification after manual calculation
-burglary_rate <- calculate_crime_rate(1200, 300000, 1000)
-print(paste("Crime rate:", burglary_rate, "per 1,000 inhabitants"))
-```
-
-### Exercise 06: Crime Rates vs National Average
-**Learning Objective:** Students use z-scores for comparative analysis
-**Criminological Context:** Identifying districts with unusual crime patterns
-**Assessment Strategy:** Z-score calculation with policy recommendations
-
-### Exercise 07: Sampling Distribution Concepts
-**Learning Objective:** Students understand sampling variability principles
-**Criminological Context:** Crime victimization surveys and representativeness
-**Assessment Strategy:** Conceptual questions about sampling bias and accuracy
-
-### Exercise 08: Standard Deviation Calculation
+### Example: Exercise 08 - Standard Deviation Calculation
 **Learning Objective:** Students quantify and interpret variability
 **Criminological Context:** Weekly violence incident variability for resource allocation
-**R Integration:** Manual calculation verification and interpretation
+**Assessment Strategy:** Manual calculation with tolerance for rounding
 
-### Exercise 09: Correlation Coefficient Calculation  
-**Learning Objective:** Students quantify linear relationships
-**Criminological Context:** Police patrol frequency vs theft incidents
-**Assessment Strategy:** Manual calculation with scatterplot interpretation
+**Scaffolding Features:**
+- Step-by-step calculation guide provided
+- Formula breakdown with variable definitions
+- Error-specific feedback for common mistakes
+
+**Sample Error Detection:**
+```r
+if (abs(student_answer - sample_sd) < 0.01) {
+  feedback <- "❌ Je hebt de steekproef-SD berekend (n-1). 
+               Voor populatie-SD gebruik n in de noemer."
+}
+```
 
 ## Analysis Level: Analyse (Exercises 10-15)
 
-### Exercise 10: Chi-Square Test Analysis
-**Learning Objective:** Students test categorical variable independence
-**Criminological Context:** Education level and crime type association
-**Advanced Features:** Expected frequency calculation, degrees of freedom interpretation
-
-```r
-# R Integration for Chi-Square Verification
-observed_matrix <- matrix(c(25, 15, 18, 22, 12, 28), nrow = 3, byrow = TRUE)
-chi_test <- chisq.test(observed_matrix)
-print(paste("Chi-square statistic:", round(chi_test$statistic, 2)))
-print(paste("p-value:", round(chi_test$p.value, 4)))
-```
-
-### Exercise 11: Histogram Interpretation
-**Learning Objective:** Students analyze distribution shapes and patterns
-**Criminological Context:** Monthly crime frequency distributions across precincts
-**Assessment Strategy:** Shape classification, skewness interpretation, policy implications
-
-### Exercise 12: Boxplot Interpretation
-**Learning Objective:** Students identify outliers and distribution characteristics  
-**Criminological Context:** Comparing crime types across multiple jurisdictions
-**Assessment Strategy:** Five-number summary interpretation, outlier identification
-
-### Exercise 13: t-Test Calculation
+### Example: Exercise 13 - t-Test Calculation
 **Learning Objective:** Students test mean differences between groups
 **Criminological Context:** Before/after intervention effectiveness evaluation
-**Advanced Features:** Assumption checking, effect size consideration
+**Expected Answer:** 5.51 (with ±0.05 tolerance)
 
-### Exercise 14: Confidence Interval Construction
-**Learning Objective:** Students quantify estimation uncertainty
-**Criminological Context:** Auto theft rate estimation for budget planning
-**Assessment Strategy:** Manual construction with practical interpretation
-
-### Exercise 15: Effect Size Calculation (Cohen's d)
-**Learning Objective:** Students distinguish statistical vs practical significance
-**Criminological Context:** Crime prevention program effectiveness assessment
-**Policy Connection:** Budget allocation decisions based on effect magnitude
+**Scaffolding Features:**
+- Formula references provided
+- Step-by-step verification in detailed feedback
+- Multiple error patterns identified with specific guidance
 
 ## Evaluation Level: Evaluate (Exercises 16-19)
 
-### Exercise 16: Scatterplot and Correlation Evaluation
-**Learning Objective:** Students critically evaluate relationship claims
-**Criminological Context:** Unemployment and violent crime correlation analysis
-**Critical Thinking Focus:** Alternative explanations, confounding variables
-
-### Exercise 17: Partial Correlation Analysis
-**Learning Objective:** Students understand complex multi-variable relationships
-**Criminological Context:** Crime-unemployment relationship controlling for education
-**Advanced Concept:** Third variable effects, spurious correlation detection
-
-### Exercise 18: Statistical Significance Interpretation
-**Learning Objective:** Students make informed decisions about statistical evidence
-**Criminological Context:** p-value interpretation in policy research
-**Critical Elements:** Type I error, practical significance, replication concerns
-
-### Exercise 19: Spurious Correlation Detection
+### Example: Exercise 19 - Spurious Correlation Detection
 **Learning Objective:** Students distinguish correlation from causation
-**Criminological Context:** Ice cream sales and drowning deaths relationship
-**Metacognitive Focus:** Critical evaluation of media statistical claims
+**Criminological Context:** Third variable effects in crime relationships
+**Assessment Strategy:** Multiple choice with critical thinking prompts
+
+**Scaffolding Features:**
+- Framework for evaluation without giving away answers
+- Critical thinking prompts about alternative explanations
+- Policy implications discussed in feedback
 
 ## Creation Level: Create (Exercise 20)
 
-### Exercise 20: Research Design Creation
+### Example: Exercise 20 - Research Design Creation
 **Learning Objective:** Students design original criminological research
 **Synthesis Requirement:** Integration of all previous statistical concepts
-**Assessment Criteria:** Methodological soundness, ethical considerations, statistical appropriateness
+**Scaffolding Features:** Basic framework templates only, minimal guidance
 
 ---
 
@@ -475,15 +417,20 @@ Inferentiële statistiek maakt voorspellingen over populaties."
 beschrijvende statistiek: gemiddeldes, totalen, verdelingen."
 
 # Level 4: Extension and Policy Connection
+### Scaffolding Feedback Strategy
+**Context-Specific Guidance:** Targeted feedback maintaining criminological context
+
+Example from Exercise 04 (Central Tendency):
+```
 "**Beleidsimplicatie:** Deze beschrijvende statistieken helpen
 bij resource-allocatie en patroonherkenning voor volgend jaar."
 ```
 
-### Adaptive Scaffolding Responses
-**Error-Specific Guidance:** Customized feedback based on common misconception patterns
+### Error-Specific Feedback
+**Diagnostic Responses:** Customized feedback based on common misconception patterns
 
 ```r
-# Adaptive feedback example from Exercise 08 (Standard Deviation)
+# Example feedback logic from Exercise 08 (Standard Deviation)
 if (student_answer == sample_sd) {
   return("Je hebt de steekproef-SD berekend. Voor deze opgave 
           gebruiken we populatie-SD (n in noemer).")
@@ -492,23 +439,6 @@ if (student_answer == sample_sd) {
 } else if (abs(student_answer - mean_abs_dev) < 0.1) {
   return("Dit lijkt op gemiddelde absolute afwijking. 
           SD gebruikt gekwadrateerde afwijkingen.")
-}
-```
-
-### Learning Analytics Integration
-**Performance Tracking:** Comprehensive monitoring of student progress patterns
-
-```r
-# Example learning analytics metrics
-track_performance <- function(student_id, exercise_id, attempts, correct) {
-  metrics <- list(
-    completion_rate = calculate_completion(student_id),
-    hint_usage = count_hints_used(student_id, exercise_id),
-    time_on_task = calculate_duration(student_id, exercise_id),
-    error_patterns = identify_common_errors(student_id),
-    scaffolding_effectiveness = measure_scaffold_usage(student_id)
-  )
-  return(metrics)
 }
 ```
 
@@ -673,12 +603,6 @@ update_content <- function(exercise_id, improvement_type) {
 }
 ```
 
-#### Personalization Features  
-- **Adaptive Hint Systems:** More/fewer hints based on individual performance
-- **Difficulty Adjustments:** Optional advanced problems for high achievers
-- **Alternative Explanations:** Multiple explanation styles for different learning preferences
-- **Pace Flexibility:** Self-paced progression with milestone requirements
-
 ---
 
 # Implementation Timeline and Resources
@@ -692,13 +616,11 @@ update_content <- function(exercise_id, improvement_type) {
 ## Phase 2: Quality Assurance (Current)
 - 🔄 Beta testing with small student cohorts
 - 🔄 Feedback system refinement
-- 🔄 Learning analytics dashboard development
 - 🔄 Instructor training material creation
 
 ## Phase 3: Full Implementation (Planned)
 - 🔮 Course-wide deployment
 - 🔮 Student performance monitoring
-- 🔮 Continuous improvement based on analytics
 - 🔮 Peer institution sharing and collaboration
 
 ## Resource Requirements
@@ -706,7 +628,6 @@ update_content <- function(exercise_id, improvement_type) {
 ### Technical Infrastructure
 - **Dodona Platform:** Exercise hosting and automated evaluation
 - **R Environment:** Computational verification and demonstration
-- **Learning Analytics:** Performance tracking and pattern identification
 - **Content Management:** Version control and update distribution
 
 ### Human Resources
