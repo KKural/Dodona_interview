@@ -1,22 +1,23 @@
 {
-    "type": "exercise",
-    "programming_language": "r",
-    "natural_language": "en",
-    "description": {
-        "names": {
-            "en": "14. Confidence Interval Calculation"
-        }
-    },
-    "labels": [
-        "statistics",
-        "confidence-interval",
-        "estimation",
-        "inference",
-        "criminology"
-    ],
-    "internals": {
-        "token": "p7_RW-pytgCZMq8NKem9KQ2vRugfXCADAkUhr4nnGGC2E2ugRQIuNX35U9XeFs-z",
-        "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
-    },
-    "workdir": "."
+  "type": "exercise",
+  "programming_language": "r",
+  "natural_language": "en",
+  "description": {
+    "names": {
+      "en": "14. Confidence Interval Calculation"
+    }
+  },
+  "labels": [
+    "statistics",
+    "confidence-interval",
+    "estimation",
+    "inference",
+    "criminology"
+  ],
+  "internals": {
+    "token": "7R2vjD98gBT4Xrg8RmYgDP8Ir4MQyDCsNx2GPwm6zH8hZQQfNF4cGHIDXQXnEFKk",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  },
+  "workdir": ".",
+  "access": "public"
 }
