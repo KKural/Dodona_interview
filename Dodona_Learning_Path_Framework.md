@@ -109,6 +109,13 @@ Three key scaffolding techniques (Wood et al., 1976) support student development
 3. De modus is groter dan zowel het gemiddelde als de mediaan
 4. Het gemiddelde, de mediaan en de modus zijn allemaal gelijk
 
+**Correct Answer (2):** "✅ Juist! De mediaan (85) is groter dan het gemiddelde (~83,9)."
+
+**Wrong Answer Examples:**
+- **Option 1:** "❌ Fout. Het gemiddelde (~83,9) is kleiner dan de mediaan (85)."
+- **Option 3:** "❌ Fout. Hoewel de modus (85) groter is dan het gemiddelde (~83,9), is de modus gelijk aan (niet groter dan) de mediaan (85)."
+- **Option 4:** "❌ Fout. Het gemiddelde, de mediaan en de modus zijn niet allemaal gelijk—het gemiddelde ligt iets lager."
+
 #### Sample Calculation Exercise (Exercise 08: Standard Deviation)
 
 **Context:** Een politieanalyst heeft de volgende dataset met het aantal geweldsmisdrijven per week in een district over 8 weken geobserveerd: `[12, 15, 18, 22, 25, 28, 32, 35]`
@@ -117,11 +124,75 @@ Three key scaffolding techniques (Wood et al., 1976) support student development
 
 **Expected Answer:** 7.61
 
-#### Feedback Examples
+**Correct Answer Feedback:** "✅ Juist! De standaarddeviatie is inderdaad 7.61. Een standaarddeviatie van 7.61 betekent dat de meeste geweldsmisdrijven binnen ongeveer 7.61 incidenten van het gemiddelde (23.4) liggen."
 
-**Conceptual Feedback:** "Bij een rechts-scheve verdeling is het gemiddelde vaak groter dan de mediaan, bij een links-scheve verdeling is het omgekeerd. Bereken eerst de drie centrummaten en vergelijk ze met elkaar."
+**Wrong Answer Examples:**
+- **If student enters 8.16:** "❌ Bijna goed! Je hebt 8.16 geantwoord, maar dit lijkt de steekproef-standaarddeviatie te zijn (n-1 in de noemer). Voor deze opgave gebruiken we de populatie-standaarddeviatie (n in de noemer): 7.61"
+- **If student enters 57.98:** "❌ Fout. Je hebt 57.98 geantwoord, maar dit is de variantie (σ²), niet de standaarddeviatie. De standaarddeviatie is de wortel van de variantie: σ = √57.98 = 7.61"
+- **If student enters 23.38:** "❌ Fout. Je hebt 23.38 geantwoord, maar dit is het gemiddelde, niet de standaarddeviatie."
 
-**Procedural Feedback:** "Bereken eerst het gemiddelde: (12+15+18+22+25+28+32+35)/8. Gebruik dit gemiddelde om de afwijkingen te berekenen, kwadrateer alle afwijkingen en tel ze op, deel door het aantal observaties (n=8), en neem de wortel van het resultaat."
+#### Comprehensive Feedback Strategy
+
+**Educational Philosophy:** Every answer (correct or incorrect) becomes a learning opportunity with targeted feedback that addresses specific misconceptions. Our approach recognizes that wrong answers often reveal deeper understanding attempts and provide valuable teaching moments.
+
+**Key Principles:**
+
+- **Non-Judgmental Learning:** Wrong answers are treated as natural parts of the learning process, not failures
+- **Diagnostic Feedback:** Each incorrect response helps identify specific conceptual gaps or calculation errors  
+- **Anxiety Reduction:** Constructive feedback reduces fear of making mistakes and encourages exploration
+- **Conceptual Clarification:** Correct answers receive reinforcement plus deeper understanding to solidify learning
+- **Growth Mindset:** Students learn that understanding develops through practice, not innate ability
+
+**Feedback Differentiation:**
+
+- **Correct Answers:** Positive reinforcement + conceptual expansion + R programming introduction
+- **Incorrect Answers:** Gentle correction + specific misconception identification + guided pathway to understanding
+- **Partial Understanding:** Recognition of good reasoning + targeted guidance toward complete comprehension
+
+#### R Programming Introduction for Correct Answers
+
+When students provide correct answers, we include R code examples to prepare them for advanced statistics courses. This creates a smooth transition to R programming while reinforcing statistical concepts.
+
+**Example R Feedback for Standard Deviation (Exercise 08):**
+
+```r
+# Dataset: geweldsmisdrijven per week
+data <- c(12, 15, 18, 22, 25, 28, 32, 35)
+
+# Methode 1: Stap voor stap
+mean_val <- mean(data)           # Gemiddelde: 23.375
+deviations <- data - mean_val    # Afwijkingen
+squared_dev <- deviations^2      # Gekwadrateerd
+variance <- sum(squared_dev) / length(data)  # Variantie
+std_dev <- sqrt(variance)        # Standaarddeviatie: 7.61
+
+# Methode 2: Met R functie (voor vergelijking)
+# sd(data) geeft 8.16 (steekproef-formule, n-1)
+# Voor populatie gebruiken we bovenstaande methode
+```
+
+**Example R Feedback for Correlation (Exercise 09):**
+
+```r
+# Dataset: politiepatrouilles vs diefstallen
+patrols <- c(2, 4, 6, 8, 10, 12)
+thefts <- c(8, 6, 4, 2, 1, 0)
+
+# Berekening correlatiecoëfficiënt
+correlation <- cor(patrols, thefts)  # -0.989
+
+# Visualisatie van het verband
+plot(patrols, thefts, 
+     xlab = "Aantal patrouilles", 
+     ylab = "Aantal diefstallen",
+     main = "Negatief verband: r = -0.989")
+```
+
+This approach introduces students to:
+- **R syntax and functions** for next year's advanced courses
+- **Step-by-step calculation verification** using code
+- **Data visualization concepts** for statistical analysis
+- **Programming logic** applied to statistical problems
 
 #### Progressive Hint System
 
