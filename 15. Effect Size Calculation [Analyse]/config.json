@@ -1,19 +1,23 @@
 {
-    "type": "exercise",
-    "programming_language": "r",
-    "natural_language": "en",
-    "description": {
-        "names": {
-            "en": "15. Effect Size Calculation (Cohen's d)"
-        }
-    },
-    "labels": [
-        "statistics",
-        "effect-size",
-        "cohens-d",
-        "practical-significance",
-        "criminology"
-    ],
-    "internals": {},
-    "workdir": "."
+  "type": "exercise",
+  "programming_language": "r",
+  "natural_language": "en",
+  "description": {
+    "names": {
+      "en": "15. Effect Size Calculation (Cohen's d)"
+    }
+  },
+  "labels": [
+    "statistics",
+    "effect-size",
+    "cohens-d",
+    "practical-significance",
+    "criminology"
+  ],
+  "internals": {
+    "token": "DacYmnMFATRwIXFMvm7DVBCvhAYqvfBsT_CstkJ6ZUgyQ_E8zWfEwQ4qPKH6M6Hm",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  },
+  "workdir": ".",
+  "access": "public"
 }
