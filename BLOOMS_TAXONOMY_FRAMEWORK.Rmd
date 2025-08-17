@@ -40,13 +40,13 @@ This statistics course for criminology students follows a pedagogically-structur
 ```{r bloom-distribution, echo=FALSE}
 bloom_data <- data.frame(
   Level = c("Remember", "Understand", "Apply", "Analyse", "Evaluate", "Create"),
-  Count = c(2, 2, 7, 5, 3, 1),
-  Percentage = c(10, 10, 35, 25, 15, 5),
+  Count = c(2, 2, 5, 6, 4, 1),
+  Percentage = c(10, 10, 25, 30, 20, 5),
   Target = c(13, 13, 20, 20, 27, 7),
   Order = 1:6
 )
 
-kable(bloom_data[, -5], caption = "Bloom's Taxonomy Distribution Analysis")
+kable(bloom_data[, -5], caption = "Bloom's Taxonomy Distribution Analysis - Updated Exercise Order")
 ```
 
 ```{r bloom-chart, echo=FALSE, fig.width=10, fig.height=6}
@@ -66,18 +66,18 @@ ggplot(bloom_long, aes(x = reorder(Level, Order), y = Percentage, fill = Type)) 
   scale_fill_brewer(palette = "Set2")
 ```
 
-**Higher-Order Thinking Skills:** 45% (Analyse + Evaluate + Create)
+**Higher-Order Thinking Skills:** 55% (Analyse + Evaluate + Create)
 
 ---
 
 ## Progressive Exercise Organization (Simple → Difficult)
 
-### LEVEL 1: FOUNDATION (Exercises 1-4) - Maximum Scaffolding 🌱
+### LEVEL 1: FOUNDATION (Exercises 1-2) - Maximum Scaffolding 🌱
 
 #### 01. Level of Measurement 
 - **Bloom Level:** Remember
 - **Scaffolding:** Complete definitions provided, clear examples
-- **Context:** Crime type classification
+- **Context:** Crime type classification (nominal, ordinal, interval, ratio)
 - **R Integration:** After correct answer, show data type checking in R
 
 ```{r level-measurement-demo, eval=FALSE}
@@ -90,26 +90,19 @@ is.factor(crime_types)
 #### 02. Descriptive vs. Inferential Statistics
 - **Bloom Level:** Remember  
 - **Scaffolding:** Clear definitions, external links, concrete examples
-- **Context:** Police report analysis purposes
+- **Context:** Police report analysis purposes - when to describe vs. when to infer
 
-#### 03. Crime Rate Calculation
-- **Bloom Level:** Apply (moved to foundation for scaffolding)
-- **Scaffolding:** Complete formula provided, step-by-step guidance
-- **Context:** Standardizing burglary rates
-- **R Integration:** Show rate calculations
+### LEVEL 2: UNDERSTANDING (Exercises 3-4) - Heavy Scaffolding 🌿
 
-```{r crime-rate-demo, eval=FALSE}
-# After manual calculation:
-burglaries <- 1200
-population <- 300000
-rate_per_1000 <- (burglaries / population) * 1000
-print(paste("Crime rate:", rate_per_1000, "per 1,000 inhabitants"))
-```
+#### 03. Null Hypothesis Formation
+- **Bloom Level:** Understand
+- **Scaffolding:** Template formats, μ notation explained
+- **Context:** Intervention effectiveness comparison
 
-#### 04. Central Tendency
+#### 04. Central Tendency and Outliers
 - **Bloom Level:** Understand
 - **Scaffolding:** Dataset provided, calculation hints, comparison guidance
-- **Context:** Juvenile delinquency incidents
+- **Context:** Juvenile delinquency incidents - impact of extreme values
 
 ```{r central-tendency-demo, eval=FALSE}
 # After manual calculation:
@@ -120,19 +113,23 @@ median(data)    # Median
 mode_val <- names(sort(table(data), decreasing = TRUE))[1]
 ```
 
-### LEVEL 2: UNDERSTANDING (Exercises 5-8) - Heavy Scaffolding 🌿
+### LEVEL 3: APPLICATION (Exercises 5-9) - Moderate Scaffolding �
 
-#### 05. Null Hypothesis Formation
-- **Bloom Level:** Understand
-- **Scaffolding:** Template formats, μ notation explained
-- **Context:** Intervention effectiveness comparison
+#### 05. Crime Rate Calculation
+- **Bloom Level:** Apply
+- **Scaffolding:** Complete formula provided, step-by-step guidance
+- **Context:** Standardizing burglary rates across populations
+- **R Integration:** Show rate calculations
 
-#### 06. Sampling Distribution Concepts  
-- **Bloom Level:** Understand
-- **Scaffolding:** Conceptual explanations with visual metaphors
-- **Context:** Crime rate sampling
+```{r crime-rate-demo, eval=FALSE}
+# After manual calculation:
+burglaries <- 1200
+population <- 300000
+rate_per_1000 <- (burglaries / population) * 1000
+print(paste("Crime rate:", rate_per_1000, "per 1,000 inhabitants"))
+```
 
-#### 07. Z-Score and Outlier Detection
+#### 06. Crime Rates vs National Average
 - **Bloom Level:** Apply
 - **Scaffolding:** Z-score formula provided, interpretation guide
 - **Context:** District crime rates vs national averages
@@ -150,6 +147,11 @@ data.frame(District = paste("District", LETTERS[1:5]),
            Outlier = outliers)
 ```
 
+#### 07. Sampling Distribution Concepts  
+- **Bloom Level:** Apply
+- **Scaffolding:** Conceptual explanations with visual metaphors
+- **Context:** Crime rate sampling across neighborhoods
+
 #### 08. Standard Deviation Calculation
 - **Bloom Level:** Apply
 - **Scaffolding:** Complete step-by-step breakdown, error detection
@@ -163,30 +165,7 @@ r_sd <- sd(weekly_crimes) * sqrt((length(weekly_crimes)-1)/length(weekly_crimes)
 data.frame(Manual = round(manual_sd, 2), R_Population = round(r_sd, 2))
 ```
 
-### LEVEL 3: APPLICATION (Exercises 9-12) - Moderate Scaffolding 🌳
-
-#### 09. Histogram Interpretation
-- **Bloom Level:** Analyse
-- **Scaffolding:** Skewness concepts explained, visual cues
-- **Context:** Monthly crime frequency distributions
-
-#### 10. Boxplot Interpretation  
-- **Bloom Level:** Analyse
-- **Scaffolding:** Components labeled, outlier rules explained
-- **Context:** Crime type comparisons
-
-```{r boxplot-demo, eval=FALSE}
-# After interpretation exercise:
-crime_data <- data.frame(
-  Type = rep(c("Burglary", "Assault", "Theft"), each = 20),
-  Count = c(rnorm(20, 25, 8), rnorm(20, 15, 5), rnorm(20, 30, 12))
-)
-ggplot(crime_data, aes(x = Type, y = Count)) + 
-  geom_boxplot() + 
-  labs(title = "Crime Counts by Type")
-```
-
-#### 11. Correlation Coefficient Calculation
+#### 09. Correlation Coefficient Calculation
 - **Bloom Level:** Apply  
 - **Scaffolding:** Formula provided, step-by-step calculation
 - **Context:** Police patrols vs theft relationship
@@ -204,7 +183,9 @@ plot(patrols, thefts, main = "Police Patrols vs Thefts",
 abline(lm(thefts ~ patrols), col = "red")
 ```
 
-#### 12. Chi-Square Test Calculation
+### LEVEL 4: ANALYSIS (Exercises 10-15) - Light-Moderate Scaffolding �
+
+#### 10. Chi-Square Test Analysis
 - **Bloom Level:** Analyse
 - **Scaffolding:** Expected frequency steps, interpretation thresholds  
 - **Context:** Education level vs crime type association
@@ -221,10 +202,29 @@ print(paste("Manual calculation matches R:",
             round(chi_result$statistic, 2)))
 ```
 
-### LEVEL 4: ANALYSIS (Exercises 13-16) - Light-Moderate Scaffolding 🌲
+#### 11. Histogram Interpretation
+- **Bloom Level:** Analyse
+- **Scaffolding:** Skewness concepts explained, visual cues
+- **Context:** Monthly crime frequency distributions
+
+#### 12. Boxplot Interpretation  
+- **Bloom Level:** Analyse
+- **Scaffolding:** Components labeled, outlier rules explained
+- **Context:** Crime type comparisons
+
+```{r boxplot-demo, eval=FALSE}
+# After interpretation exercise:
+crime_data <- data.frame(
+  Type = rep(c("Burglary", "Assault", "Theft"), each = 20),
+  Count = c(rnorm(20, 25, 8), rnorm(20, 15, 5), rnorm(20, 30, 12))
+)
+ggplot(crime_data, aes(x = Type, y = Count)) + 
+  geom_boxplot() + 
+  labs(title = "Crime Counts by Type")
+```
 
 #### 13. t-Test Calculation
-- **Bloom Level:** Apply
+- **Bloom Level:** Analyse
 - **Scaffolding:** Formula references, degrees of freedom explanation
 - **Context:** Before/after intervention comparison
 
@@ -244,7 +244,7 @@ print(paste("Manual t-statistic:", round(t_manual, 2)))
 ```
 
 #### 14. Confidence Interval Construction  
-- **Bloom Level:** Apply
+- **Bloom Level:** Analyse
 - **Scaffolding:** t-distribution values provided, interpretation guide
 - **Context:** Auto theft rate estimation
 
@@ -263,12 +263,7 @@ manual_ci <- mean_val + c(-1, 1) * t_val * se
 print(paste("Manual CI: [", round(manual_ci[1], 2), ", ", round(manual_ci[2], 2), "]"))
 ```
 
-#### 15. R-Squared Interpretation
-- **Bloom Level:** Analyse  
-- **Scaffolding:** Explained variance concepts, causation warnings
-- **Context:** Unemployment vs violent crime relationship
-
-#### 16. Effect Size Calculation (Cohen's d)
+#### 15. Effect Size Calculation (Cohen's d)
 - **Bloom Level:** Analyse
 - **Scaffolding:** Cohen's benchmarks, practical interpretation guide  
 - **Context:** Crime prevention intervention effectiveness
@@ -291,12 +286,34 @@ d_manual <- (mean(group1) - mean(group2)) / pooled_sd
 print(paste("Manual Cohen's d:", round(d_manual, 2)))
 ```
 
-### LEVEL 5: EVALUATION (Exercises 17-19) - Light Scaffolding 🌺
+### LEVEL 5: EVALUATION (Exercises 16-19) - Light Scaffolding 🌺
 
-#### 17. Statistical Significance Interpretation
+#### 16. Scatterplot and Correlation Evaluation
+- **Bloom Level:** Evaluate
+- **Scaffolding:** Pattern recognition guidance, causation warnings
+- **Context:** Unemployment vs violent crime relationship
+
+#### 17. Partial Correlation Analysis
+- **Bloom Level:** Evaluate  
+- **Scaffolding:** "Controlling for" concept explanation
+- **Context:** Multi-variable crime relationships
+
+#### 18. Statistical Significance Interpretation
 - **Bloom Level:** Evaluate
 - **Scaffolding:** α-level concepts, Type I error explanation
 - **Context:** p-value decision making in crime research
+
+#### 19. Spurious Correlation Detection
+- **Bloom Level:** Evaluate
+- **Scaffolding:** Third variable concepts, critical thinking prompts
+- **Context:** Ice cream sales and drowning deaths relationship
+
+### LEVEL 6: CREATION (Exercise 20) - Minimal Scaffolding 🏆
+
+#### 20. Research Design Creation
+- **Bloom Level:** Create
+- **Scaffolding:** Framework templates only, ethical considerations
+- **Context:** Original crime prevention study design
 
 #### 18. Partial Correlation Analysis
 - **Bloom Level:** Evaluate  
@@ -322,9 +339,9 @@ print(paste("Manual Cohen's d:", round(d_manual, 2)))
 ```{r scaffolding-pattern, echo=FALSE}
 scaffolding_levels <- data.frame(
   Exercise = 1:20,
-  Level = c(rep("Maximum", 4), rep("Heavy", 4), rep("Moderate", 4), 
-            rep("Light-Moderate", 4), rep("Light", 3), "Minimal"),
-  Support_Score = c(rep(5, 4), rep(4, 4), rep(3, 4), rep(2, 4), rep(1, 3), 0)
+  Level = c(rep("Maximum", 2), rep("Heavy", 2), rep("Moderate", 5), 
+            rep("Light-Moderate", 6), rep("Light", 4), "Minimal"),
+  Support_Score = c(rep(5, 2), rep(4, 2), rep(3, 5), rep(2, 6), rep(1, 4), 0)
 )
 
 ggplot(scaffolding_levels, aes(x = Exercise, y = Support_Score)) +
@@ -342,7 +359,7 @@ ggplot(scaffolding_levels, aes(x = Exercise, y = Support_Score)) +
 ```{r progression-summary, echo=FALSE}
 progression_data <- data.frame(
   Stage = c("Foundation", "Understanding", "Application", "Analysis", "Evaluation", "Creation"),
-  Exercises = c("1-4", "5-8", "9-12", "13-16", "17-19", "20"),
+  Exercises = c("1-2", "3-4", "5-9", "10-15", "16-19", "20"),
   Focus = c("Basic Recognition", "Concept Comprehension", "Skill Application", 
             "Data Analysis", "Critical Assessment", "Original Design"),
   Scaffolding = c("Maximum", "Heavy", "Moderate", "Light-Moderate", "Light", "Minimal"),
@@ -350,7 +367,7 @@ progression_data <- data.frame(
                    "Advanced analysis", "Interpretation tools", "Research workflow")
 )
 
-kable(progression_data, caption = "Learning Progression Overview")
+kable(progression_data, caption = "Learning Progression Overview - Updated Exercise Distribution")
 ```
 
 ---
