@@ -1,10 +1,14 @@
-# Dodona Learning Path: Pedagogical & Technical Framework
+---
+title: "Dodona Learning Path: Pedagogical & Technical Framework"
+output: word_document
+---
 
 ## Criminology Student Profile
 
 Criminology students typically come from a social science orientation with varying levels of mathematical preparation. They approach statistics primarily as practical tools for understanding crime data rather than as abstract mathematical concepts. Many initially approach statistics with apprehension due to limited prior exposure to formal statistical training. However, when presented through relevant criminological examples, students typically demonstrate stronger engagement and comprehension.
 
 **Key Characteristics:**
+
 - **Academic Background:** Primary orientation in social science rather than mathematical/statistical fields
 - **Mathematical Preparation:** Highly variable, often limited formal statistical training
 - **Learning Motivation:** High engagement when content connects to criminological applications
@@ -67,32 +71,6 @@ The following table shows how each exercise aligns with specific cognitive level
 | 19 | Spurious Correlation Detection | Evaluate | Q19 | Evaluate causation vs correlation |
 | 20 | Research Design Creation | Create | Q20 | Design original research methods |
 
-### Future Enhancement: Integrated Application Within Statistical Concepts
-
-**Planned Development:** While the current course structure uses Bloom's Taxonomy for overall progression across 20 exercises, future enhancements will integrate both Bloom's levels and scaffolding techniques within each individual statistical concept to maximize learning effectiveness. This approach will transform isolated exercises into comprehensive statistical units (correlation, regression, hypothesis testing, etc.) that incorporate multiple cognitive levels and scaffolding support.
-
-**Example: Correlation Concept Integration**
-
-A future comprehensive correlation unit would demonstrate how both frameworks work together:
-
-| Bloom Level | Exercise Type | Scaffolding Support | Learning Outcome |
-|-------------|---------------|-------------------|------------------|
-| **Remember** | Define correlation coefficient | Conceptual hints: "Correlation measures linear relationships" | Basic concept recognition |
-| **Understand** | Interpret r = -0.8 in context | Visual support: Scatterplot examples | Conceptual comprehension |
-| **Apply** | Calculate Pearson's r | Step-by-step guidance: Formula breakdown | Formula application skills |
-| **Analyse** | Compare correlations across datasets | Graduated difficulty: Simple → complex data | Pattern recognition |
-| **Evaluate** | Assess correlation vs causation | Critical thinking prompts | Interpretation skills |
-| **Create** | Design study to test correlation | Minimal guidance: Independent problem-solving | Research design synthesis |
-
-**Anticipated Benefits of Integrated Approach:**
-- **Deeper Understanding:** Students would experience complete concept mastery rather than isolated skills
-- **Progressive Complexity:** Each cognitive level would build upon previous understanding
-- **Contextual Learning:** All exercises would use consistent criminological scenarios
-- **Scaffolding Continuity:** Support would gradually decrease as students advance through Bloom's levels
-- **Concept Reinforcement:** Multiple perspectives on the same statistical concept would strengthen retention
-
-This future integration would ensure that students don't just learn to calculate statistics, but develop comprehensive statistical reasoning skills applicable to criminological research.
-
 ## Learning Support Strategies
 
 ### Scaffolding Approach
@@ -138,6 +116,7 @@ Three key scaffolding techniques (Wood et al., 1976) support student development
 **Correct Answer (2):** "✅ Juist! De mediaan (85) is groter dan het gemiddelde (~83,9)."
 
 **Wrong Answer Examples:**
+
 - **Option 1:** "❌ Fout. Het gemiddelde (~83,9) is kleiner dan de mediaan (85)."
 - **Option 3:** "❌ Fout. Hoewel de modus (85) groter is dan het gemiddelde (~83,9), is de modus gelijk aan (niet groter dan) de mediaan (85)."
 - **Option 4:** "❌ Fout. Het gemiddelde, de mediaan en de modus zijn niet allemaal gelijk—het gemiddelde ligt iets lager."
@@ -153,6 +132,7 @@ Three key scaffolding techniques (Wood et al., 1976) support student development
 **Correct Answer Feedback:** "✅ Juist! De standaarddeviatie is inderdaad 7.61. Een standaarddeviatie van 7.61 betekent dat de meeste geweldsmisdrijven binnen ongeveer 7.61 incidenten van het gemiddelde (23.4) liggen."
 
 **Wrong Answer Examples:**
+
 - **If student enters 8.16:** "❌ Bijna goed! Je hebt 8.16 geantwoord, maar dit lijkt de steekproef-standaarddeviatie te zijn (n-1 in de noemer). Voor deze opgave gebruiken we de populatie-standaarddeviatie (n in de noemer): 7.61"
 - **If student enters 57.98:** "❌ Fout. Je hebt 57.98 geantwoord, maar dit is de variantie (σ²), niet de standaarddeviatie. De standaarddeviatie is de wortel van de variantie: σ = √57.98 = 7.61"
 - **If student enters 23.38:** "❌ Fout. Je hebt 23.38 geantwoord, maar dit is het gemiddelde, niet de standaarddeviatie."
@@ -215,6 +195,7 @@ plot(patrols, thefts,
 ```
 
 This approach introduces students to:
+
 - **R syntax and functions** for next year's advanced courses
 - **Step-by-step calculation verification** using code
 - **Data visualization concepts** for statistical analysis
@@ -223,6 +204,7 @@ This approach introduces students to:
 #### Progressive Hint System
 
 **Hints for Statistical Concepts:**
+
 - "Bij een rechts-scheve verdeling is het gemiddelde vaak groter dan de mediaan"
 - "Gebruik de populatie-formule (delen door n), niet de steekproef-formule (delen door n-1)"
 - "Bereken eerst het gemiddelde, dan de afwijkingen, kwadrateer ze, en neem de wortel"
@@ -232,6 +214,7 @@ This approach introduces students to:
 ### Performance Tracking
 
 The Dodona platform provides:
+
 - **Comprehensive dashboards** for student progress monitoring
 - **Performance breakdowns** by course section
 
@@ -250,6 +233,7 @@ The Dodona platform provides:
 ## Future Development
 
 Planned enhancements include:
+
 - **R Studio integration** for complex data analysis
 - **Advanced multivariate statistical methods**  
 - **Adaptive learning pathways** based on performance
