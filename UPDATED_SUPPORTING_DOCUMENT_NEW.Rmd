@@ -71,6 +71,32 @@ The following table shows how each exercise aligns with specific cognitive level
 | 19 | Spurious Correlation Detection | Evaluate | Q19 | Evaluate causation vs correlation |
 | 20 | Research Design Creation | Create | Q20 | Design original research methods |
 
+### Future Enhancement: Integrated Application Within Statistical Concepts
+
+**Planned Development:** While the current course structure uses Bloom's Taxonomy for overall progression across 20 exercises, future enhancements will integrate both Bloom's levels and scaffolding techniques within each individual statistical concept to maximize learning effectiveness. This approach will transform isolated exercises into comprehensive statistical units (correlation, regression, hypothesis testing, etc.) that incorporate multiple cognitive levels and scaffolding support.
+
+**Example: Correlation Concept Integration**
+
+A future comprehensive correlation unit would demonstrate how both frameworks work together:
+
+| Bloom Level | Exercise Type | Scaffolding Support | Learning Outcome |
+|-------------|---------------|-------------------|------------------|
+| **Remember** | Define correlation coefficient | Conceptual hints: "Correlation measures linear relationships" | Basic concept recognition |
+| **Understand** | Interpret r = -0.8 in context | Visual support: Scatterplot examples | Conceptual comprehension |
+| **Apply** | Calculate Pearson's r | Step-by-step guidance: Formula breakdown | Formula application skills |
+| **Analyse** | Compare correlations across datasets | Graduated difficulty: Simple → complex data | Pattern recognition |
+| **Evaluate** | Assess correlation vs causation | Critical thinking prompts | Interpretation skills |
+| **Create** | Design study to test correlation | Minimal guidance: Independent problem-solving | Research design synthesis |
+
+**Anticipated Benefits of Integrated Approach:**
+- **Deeper Understanding:** Students would experience complete concept mastery rather than isolated skills
+- **Progressive Complexity:** Each cognitive level would build upon previous understanding
+- **Contextual Learning:** All exercises would use consistent criminological scenarios
+- **Scaffolding Continuity:** Support would gradually decrease as students advance through Bloom's levels
+- **Concept Reinforcement:** Multiple perspectives on the same statistical concept would strengthen retention
+
+This future integration would ensure that students don't just learn to calculate statistics, but develop comprehensive statistical reasoning skills applicable to criminological research.
+
 ## Learning Support Strategies
 
 ### Scaffolding Approach
@@ -99,6 +125,69 @@ Three key scaffolding techniques (Wood et al., 1976) support student development
 - **Clear Expectations:** Explicitly stated learning objectives
 - **Visual Supports:** Varied presentation for different learning styles
 - **Consistent Structure:** Reduced cognitive load through predictable formats
+
+### Multimedia Integration and External Resources
+
+The learning path incorporates diverse multimedia elements and external resources to enhance understanding and accommodate different learning preferences:
+
+#### Visual Learning Support
+
+- **Images and Diagrams:** Statistical concepts illustrated through visual representations (histograms, scatterplots, boxplots)
+- **Infographics:** Complex statistical relationships presented in accessible visual formats
+- **Screenshots:** Step-by-step calculation processes shown through visual guides
+- **Interactive Visualizations:** Dynamic charts and graphs that students can explore
+
+#### Video-Based Learning
+
+- **Instructional Videos:** Custom-created explanations of statistical concepts with criminological examples
+- **YouTube Integration:** Curated educational videos from reputable statistics and criminology channels
+- **Recorded Lectures:** Course-specific video content explaining key concepts and procedures
+- **Worked Examples:** Video walkthroughs of sample problems and calculations
+
+#### External Learning Resources
+
+- **Textbook Links:** Direct connections to relevant sections in statistical and criminological textbooks
+- **Web-Based Resources:** Links to educational websites, statistical software tutorials, and academic articles
+- **Interactive Simulations:** External tools for exploring statistical concepts hands-on
+- **Professional Resources:** Links to criminological research databases and statistical tools used in practice
+
+#### Implementation Examples
+
+**Exercise Enhancement through Multimedia:**
+
+- **Exercise 11 (Histogram Interpretation):** Includes actual histogram images with interactive elements
+- **Exercise 16 (Scatterplot Evaluation):** Features embedded scatterplot visualizations with clickable data points
+- **Exercise 20 (Research Design):** Provides links to real criminological studies as design examples
+
+**External Link Integration Example (Exercise 02):**
+
+In Exercise 02 "Descriptive vs Inferential Statistics", external educational resources are seamlessly integrated into every feedback response:
+
+**Question Context:** "Wat is het belangrijkste doel van beschrijvende statistiek in een misdaaddataverslag?"
+
+**Feedback with External Links:**
+
+- **Correct Answer (Option 2):** "✅ Juist! Beschrijvende statistiek heeft als doel alle variabelen samen te vatten zoals gemiddeldes, frequenties en verdelingen. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
+
+- **Wrong Answer Examples:**
+  - **Option 1:** "❌ Fout. Dit gaat over inferentiële of voorspellende statistiek, niet over beschrijvende statistiek. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
+  - **Option 3:** "❌ Fout. Het toetsen van hypotheses hoort bij inferentiële statistiek, niet bij beschrijvende statistiek. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
+
+**Key Features:**
+- **Consistent Resource Access:** Same educational link provided for all answer options
+- **Markdown Integration:** Standard `[Link Text](URL)` format works seamlessly in Dodona feedback
+- **Learning Enhancement:** Students get additional resources regardless of their initial answer
+- **Non-judgmental Support:** Even incorrect responses include helpful external resources
+
+**Resource Integration Benefits:**
+
+- **Multi-sensory Learning:** Visual, auditory, and kinesthetic learning preferences accommodated
+- **Extended Learning:** Students can explore topics beyond basic requirements
+- **Real-world Connections:** Links to current criminological research and professional practice
+- **Accessibility:** Multiple formats ensure content is accessible to diverse learners
+- **Engagement:** Multimedia elements increase student interest and participation
+
+This multimedia approach transforms traditional text-based exercises into rich, interactive learning experiences that better prepare students for advanced statistical work.
 
 ### Example Content and Feedback
 
