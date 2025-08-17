@@ -1,23 +1,23 @@
 {
-    "type": "exercise",
-    "programming_language": "r",
-    "natural_language": "en",
-    "access": "public",
-    "description": {
-        "names": {
-            "en": "08. Standard Deviation Calculation"
-        }
-    },
-    "labels": [
-        "statistics",
-        "standard-deviation",
-        "variance",
-        "descriptive-statistics",
-        "criminology"
-    ],
-    "internals": {
-        "token": "a8yEw2h5huIKedeHEJVquUR-agBjhFWaWkHna3naaNPVFkNJqbqU5-_TIimuMiNU",
-        "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
-    },
-    "workdir": "."
+  "type": "exercise",
+  "programming_language": "r",
+  "natural_language": "en",
+  "access": "public",
+  "description": {
+    "names": {
+      "en": "08. Standard Deviation Calculation"
+    }
+  },
+  "labels": [
+    "statistics",
+    "standard-deviation",
+    "variance",
+    "descriptive-statistics",
+    "criminology"
+  ],
+  "internals": {
+    "token": "HHm6y3NMT8YiFD9uGxKhPE9PiYWxAHYdvAYA5bSZbSib5iksPBstZRVjpHGq8x_w",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  },
+  "workdir": "."
 }
