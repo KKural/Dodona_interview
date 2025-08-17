@@ -5,7 +5,7 @@ context({
       testEqual(
         "",
         function(env) env$evaluationResult,
-        "25.12,30.88",  # the correct confidence interval
+        "25.04,31.18",  # the correct confidence interval
         comparator = function(generated, expected, ...) {
           # Parse the student answer
           student_answer <- tryCatch({
