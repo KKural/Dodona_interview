@@ -181,11 +181,11 @@ In Exercise 02 "Descriptive vs Inferential Statistics", external educational res
 
 **Feedback with External Links:**
 
-- **Correct Answer (Option 2):** "✅ Juist! Beschrijvende statistiek heeft als doel alle variabelen samen te vatten zoals gemiddeldes, frequenties en verdelingen. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
+- **Correct Answer (Option 2):** "✅ Juist! Beschrijvende statistiek heeft als doel alle variabelen samen te vatten zoals gemiddeldes, frequenties en verdelingen. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
 
 - **Wrong Answer Examples:**
-  - **Option 1:** "❌ Fout. Dit gaat over inferentiële of voorspellende statistiek, niet over beschrijvende statistiek. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
-  - **Option 3:** "❌ Fout. Het toetsen van hypotheses hoort bij inferentiële statistiek, niet bij beschrijvende statistiek. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
+  - **Option 1:** "❌ Fout. Dit gaat over inferentiële of voorspellende statistiek, niet over beschrijvende statistiek. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
+  - **Option 3:** "❌ Fout. Het toetsen van hypotheses hoort bij inferentiële statistiek, niet bij beschrijvende statistiek. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
 
 **Key Features:**
 - **Consistent Resource Access:** Same educational link provided for all answer options
@@ -199,24 +199,24 @@ The multimedia integration accommodates diverse learning preferences through vis
 
 ## Example Content and Feedback
 
-### Sample Exercise Structure (Exercise 04: Central Tendency and Outliers)
+### Sample Exercise Structure (Exercise 02: Descriptive vs Inferential Statistics)
 
-**Context:** Beschouw de volgende dataset met het aantal delicten per maand gepleegd door een groep jeugdige delinquenten: `[65, 70, 70, 80, 85, 85, 85, 90, 95, 98, 100]`
+**Context:** "Wat is het belangrijkste doel van beschrijvende statistiek in een criminaliteitsrapport?"
 
 **Question:** Welke van de volgende uitspraken is correct?
 
-1. Het gemiddelde is groter dan de mediaan
-2. De mediaan is groter dan het gemiddelde  
-3. De modus is groter dan zowel het gemiddelde als de mediaan
-4. Het gemiddelde, de mediaan en de modus zijn allemaal gelijk
+1. Het schatten van toekomstige misdaadcijfers in de populatie
+2. Het samenvatten van alle variabelen zoals gemiddeldes, frequenties en verdelingen
+3. Het toetsen van hypotheses over de relatie tussen armoede en misdaad
+4. Het modelleren van het causaal effect van politiewerk op misdaad
 
-**Correct Answer (2):** "✅ Juist! De mediaan (85) is groter dan het gemiddelde (~83,9)."
+**Correct Answer (2):** "✅ Juist! Beschrijvende statistiek heeft als doel alle variabelen samen te vatten zoals gemiddeldes, frequenties en verdelingen. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
 
 **Wrong Answer Examples:**
 
-- **Option 1:** "❌ Fout. Het gemiddelde (~83,9) is kleiner dan de mediaan (85)."
-- **Option 3:** "❌ Fout. Hoewel de modus (85) groter is dan het gemiddelde (~83,9), is de modus gelijk aan (niet groter dan) de mediaan (85)."
-- **Option 4:** "❌ Fout. Het gemiddelde, de mediaan en de modus zijn niet allemaal gelijk—het gemiddelde ligt iets lager."
+- **Option 1:** "❌ Fout. Dit gaat over inferentiële of voorspellende statistiek, niet over beschrijvende statistiek. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
+- **Option 3:** "❌ Fout. Het toetsen van hypotheses hoort bij inferentiële statistiek, niet bij beschrijvende statistiek. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
+- **Option 4:** "❌ Fout. Het modelleren van causale effecten valt onder geavanceerde inferentiële statistiek, niet onder beschrijving. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
 
 ### Sample Calculation Exercise (Exercise 08: Standard Deviation)
 
@@ -230,7 +230,7 @@ The multimedia integration accommodates diverse learning preferences through vis
 
 **Wrong Answer Examples:**
 
-- **If student enters 8.16:** "❌ Bijna goed! Je hebt 8.16 geantwoord, maar dit lijkt de steekproef-standaarddeviatie te zijn (n-1 in de noemer). Voor deze opgave gebruiken we de populatie-standaarddeviatie (n in de noemer): 7.61"
+- **If student enters 8.14:** "❌ Bijna goed! Je hebt 8.14 geantwoord, maar dit lijkt de steekproef-standaarddeviatie te zijn (n-1 in de noemer). Voor deze opgave gebruiken we de populatie-standaarddeviatie (n in de noemer): 7.61"
 - **If student enters 57.98:** "❌ Fout. Je hebt 57.98 geantwoord, maar dit is de variantie (σ²), niet de standaarddeviatie. De standaarddeviatie is de wortel van de variantie: σ = √57.98 = 7.61"
 - **If student enters 23.38:** "❌ Fout. Je hebt 23.38 geantwoord, maar dit is het gemiddelde, niet de standaarddeviatie."
 
@@ -270,7 +270,7 @@ variance <- sum(squared_dev) / length(data)  # Variantie
 std_dev <- sqrt(variance)        # Standaarddeviatie: 7.61
 
 # Methode 2: Met R functie (voor vergelijking)
-# sd(data) geeft 8.16 (steekproef-formule, n-1)
+# sd(data) geeft 8.14 (steekproef-formule, n-1)
 # Voor populatie gebruiken we bovenstaande methode
 ```
 
