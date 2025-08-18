@@ -9,16 +9,16 @@ context({
         comparator = function(generated, expected, ...) {
           feedbacks <- list(
             # ❌ InJuist. This refers to inferential or predictive statistics, not descriptive statistics.
-            "1" = "❌ Fout. Dit gaat over inferentiële of voorspellende statistiek, niet over beschrijvende statistiek. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)",
+            "1" = "❌ Fout. Dit gaat over inferentiële of voorspellende statistiek, niet over beschrijvende statistiek. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)",
             
             # ✅ Juist! Descriptive statistics summarize variables like means, frequencies and distributions.
-            "2" = "✅ Juist! Beschrijvende statistiek heeft als doel alle variabelen samen te vatten zoals gemiddeldes, frequenties en verdelingen. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)",
+            "2" = "✅ Juist! Beschrijvende statistiek heeft als doel alle variabelen samen te vatten zoals gemiddeldes, frequenties en verdelingen. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)",
             
             # ❌ No. Hypothesis testing is part of inferential statistics, not descriptive.
-            "3" = "❌ Fout. Het toetsen van hypotheses hoort bij inferentiële statistiek, niet bij beschrijvende statistiek. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)",
+            "3" = "❌ Fout. Het toetsen van hypotheses hoort bij inferentiële statistiek, niet bij beschrijvende statistiek. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)",
             
             # ❌ Not Juist. Causal modeling involves complex statistical inference, not mere description.
-            "4" = "❌ Fout. Het modelleren van causale effecten valt onder geavanceerde inferentiële statistiek, niet onder beschrijving. [Learn more about Descriptive and Inferential statistics interpretation](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
+            "4" = "❌ Fout. Het modelleren van causale effecten valt onder geavanceerde inferentiële statistiek, niet onder beschrijving. [Leer meer over beschrijvende en inferentiële statistiek](https://www.simplilearn.com/difference-between-descriptive-inferential-statistics-article)"
           )
           
           key <- as.character(generated)
