@@ -1,4 +1,4 @@
-Wat is het belangrijkste doel van beschrijvende statistiek in een misdaaddataverslag?
+Wat is het belangrijkste doel van beschrijvende statistiek in een criminaliteitsrapport?
 
 1.	Het schatten van toekomstige misdaadcijfers in de populatie
 2.	Het samenvatten van alle variabelen zoals gemiddeldes, frequenties en verdelingen
