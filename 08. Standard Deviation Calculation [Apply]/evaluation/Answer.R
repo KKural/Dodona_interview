@@ -42,7 +42,21 @@ context({
                     "σ² = Σ(x - μ)² / n = ", round(sum(squared_deviations), 3), " / 8 = ", round(variance, 3), "\n\n",
                     "**Stap 5: Standaarddeviatie**\n",
                     "σ = √(σ²) = √", round(variance, 3), " = ", std_dev_rounded, "\n\n",
-                    "**Interpretatie:** Een standaarddeviatie van ", std_dev_rounded, " betekent dat de meeste geweldsmisdrijven binnen ongeveer ", std_dev_rounded, " incidenten van het gemiddelde (", round(mean_val, 1), ") liggen."), 
+                    "**Interpretatie:** Een standaarddeviatie van ", std_dev_rounded, " betekent dat de meeste geweldsmisdrijven binnen ongeveer ", std_dev_rounded, " incidenten van het gemiddelde (", round(mean_val, 1), ") liggen.\n\n",
+                    "**R Code (voor gevorderden):**\n\n",
+                    "```r\n",
+                    "# Dataset: geweldsmisdrijven per week\n",
+                    "data <- c(12, 15, 18, 22, 25, 28, 32, 35)\n\n",
+                    "# Methode 1: Stap voor stap\n",
+                    "mean_val <- mean(data)           # Gemiddelde: 23.375\n",
+                    "deviations <- data - mean_val    # Afwijkingen\n",
+                    "squared_dev <- deviations^2      # Gekwadrateerd\n",
+                    "variance <- sum(squared_dev) / length(data)  # Variantie\n",
+                    "std_dev <- sqrt(variance)        # Standaarddeviatie: 7.61\n\n",
+                    "# Methode 2: Met R functie (voor vergelijking)\n",
+                    "# sd(data) geeft 8.14 (steekproef-formule, n-1)\n",
+                    "# Voor populatie gebruiken we bovenstaande methode\n",
+                    "```"), 
               type = "markdown"
             )
           } else {
